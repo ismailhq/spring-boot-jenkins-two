@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -19,7 +19,7 @@ public class SpringBootJenkinsApplication {
 		SpringApplication.run(SpringBootJenkinsApplication.class, args);
 	}
 	
-	@RequestMapping("/greeting")
+	@GetMapping("/greeting")
 	public String greeting() {
 		System.out.println("Inside greeting()=====>>>>");
 		return "Greetings from jenkins demo project...after integration with docker hub and kubernetes...final testing done by ismail";
