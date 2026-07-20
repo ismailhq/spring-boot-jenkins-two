@@ -7,28 +7,28 @@ pipeline{
         stage('Bulid Maven'){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ismailhq/spring-boot-jenkins-two']])
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Build Docker Image'){
             steps{
                 script{
-                    bat 'docker build -t ismailhq/spring-boot-jenkins .'
+                    sh 'docker build -t ismailhq/spring-boot-jenkins .'
                 }
             }
         }
         stage('Push Docker Image to Hub'){
             steps{
                 script{
-                    bat 'docker login -u ismailhq -p 08301A0585@d'
-                    bat 'docker push ismailhq/spring-boot-jenkins'
+                    sh 'docker login -u ismailhq -p 08301A0585@d'
+                    sh 'docker push ismailhq/spring-boot-jenkins'
                 }
             }
         }
         stage('Deploy to K8s'){
             steps{
                 script{
-                    bat "kubectl apply -f deploymentservice.yaml"
+                    sh "kubectl apply -f deploymentservice.yaml"
                 }
             }
         }
