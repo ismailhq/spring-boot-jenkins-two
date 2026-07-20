@@ -13,7 +13,7 @@ pipeline{
         stage('Build Docker Image'){
             steps{
                 script{
-                    sh 'docker build -t ismailhq/spring-boot-jenkins .'
+                    sh 'docker build -t ismailhq/spring-boot-jenkins-two .'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline{
             steps{
                 script{
                     sh 'docker login -u ismailhq -p 08301A0585@d'
-                    sh 'docker push ismailhq/spring-boot-jenkins'
+                    sh 'docker push ismailhq/spring-boot-jenkins-two'
                 }
             }
         }
