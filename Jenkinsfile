@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Bulid Maven'){
             steps{
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ismailhq/spring-boot-jenkins']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ismailhq/spring-boot-jenkins-two']])
                 bat 'mvn clean install'
             }
         }
