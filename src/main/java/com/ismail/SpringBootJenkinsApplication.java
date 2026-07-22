@@ -16,12 +16,14 @@ public class SpringBootJenkinsApplication {
 
 	public static void main(String[] args) {
 		logger.info("Test logging two from main method......");
+		logger.info("Test logging two from main method modified to test Auto build......");
 		SpringApplication.run(SpringBootJenkinsApplication.class, args);
 	}
 	
 	@GetMapping("/greeting")
 	public String greeting() {
 		System.out.println("Inside greeting()=====>>>>");
+		System.out.println("Inside greeting() modified=====>>>>");
 		return "Greetings from jenkins demo project...after integration with docker hub and kubernetes...final testing done by ismail";
 	}
 
