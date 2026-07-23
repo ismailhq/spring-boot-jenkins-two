@@ -17,6 +17,7 @@ class SpringBootJenkinsApplicationTests {
 		logger.info("Test logging four from test class second time.........");
 		logger.info("Test logging four from test class Third time on 22/7/2026.........");
 		logger.info("Test logging final from test class on 22/7/2026 email notification testing.........");
+		logger.info("Test Pipeline automated...Ismail...");
 		assertEquals(true, true);
 	}
 
