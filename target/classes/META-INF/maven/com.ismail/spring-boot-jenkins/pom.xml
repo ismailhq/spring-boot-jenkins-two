@@ -44,7 +44,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>spring-boot-jenkins</finalName>
+		<finalName>spring-boot-jenkins-two</finalName>
 	</build>
 
 </project>
